@@ -30,7 +30,6 @@ export class AppContextProvider extends React.Component<{}, IAppContext> {
     this.setState({
       integers: [],
       operators: [],
-      lastButton: undefined,
       displayDigits: undefined
     });
   };
@@ -71,7 +70,7 @@ export class AppContextProvider extends React.Component<{}, IAppContext> {
       if (label === "=") {
         this.clear();
         const result = calc(integers, operators);
-        this.setState({ displayDigits: result   });
+        this.setState({ displayDigits: result });
         console.log(result);
       }
     }
